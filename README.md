@@ -1,61 +1,70 @@
-# Startup - Free Next.js Startup Website Template
+# Saas UI - Next.js - landing page.
 
-Startup free, open-source, and premium-quality startup website template for Next.js comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
+This is a free Next.js landing page template based on https://saas-ui.dev.
+Feel free to submit any feature requests. If you use this template please share what you've built [on Twitter](https://twitter.com/saas_js) 🚀.
 
-If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!
+**[View demo](https://saas-ui-nextjs-landing-page.netlify.app/)**
 
-### ✨ Key Features
-- Crafted for Startup and SaaS Business
-- Next.js and Tailwind CSS
-- All Essential Business Sections and Pages
-- High-quality and Clean Design
-- Dark and Light Version
-- TypeScript Support
-and Much More ...
+## Tech
 
-### 🙌 Detailed comparison between the Free and Pro versions of Startup
+- Next.js
+- Chakra UI
+- Saas UI
+- Contentlayer
+- Typescript
 
-| Feature             | Free | Pro |
-|---------------------|------------|----------|
-| Next.js Landing Page             | ✅ Yes      | ✅ Yes      |
-| All The Integrations - Auth, DB, Payments, Blog and many more ...             | ❌ No      | ✅ Yes |
-| Homepage Variations             | 1      | 2 |
-| Additional SaaS Pages and Components             | ❌ No      | ✅ Yes |
-| Functional Blog with Sanity       | ❌ No      | ✅ Yes | ✅ Yes |
-| Use with Commercial Projects            | ✅ Yes      | ✅ Yes      |
-| Lifetime Free Updates             | ✅ Yes      | ✅ Yes |
-| Email Support       | ❌ No         | ✅ Yes       |
-| Community Support         | ✅ Yes         | ✅ Yes       |
+## Features
 
+- Feature blocks
+- Testimonials
+- Pricing tables
+- Log in and Sign up pages
+- FAQ
 
-### [🔥 Get Startup Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+## In progress
 
-[![Startup Pro](https://raw.githubusercontent.com/NextJSTemplates/startup-nextjs/main/startup-pro.webp)](https://nextjstemplates.com/templates/saas-starter-startup)
+- [ ] Supabase Auth
+- [ ] Waitlist sign-up with GetRevue
+- [ ] Blog (Contentlayer)
+- [ ] Docs
 
-Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
+## Getting Started
 
+First, clone this repo and run `pnpm i`
 
-### [🚀 View Free Demo](https://startup.nextjstemplates.com/)
+To start the app run:
 
-### [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
+```bash
+pnpm dev
+```
 
-### [📦 Download](https://nextjstemplates.com/templates/startup)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-### [🔌 Documentation](https://nextjstemplates.com/docs)
+## Configuration
 
-### ⚡ Deploy Now
+Configuration files to edit basic site information, add testimonials, faq and pricing table can be found in `/data`.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
+## Learn More
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
+Find out more about Saas UI.
 
+- [Saas UI Documentation](https://saas-ui.dev/docs/introduction).
 
-### 📄 License
-Startup is 100% free and open-source, feel free to use with your personal and commercial projects.
+To learn more about Next.js, take a look at the following resources:
 
-### 💜 Support
-If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### ✨ Explore and Download - Free [Next.js Templates](https://nextjstemplates.com)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## License
+
+MIT
