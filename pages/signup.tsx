@@ -1,14 +1,14 @@
 import { NextPage } from 'next'
-import NextLink from 'next/link'
-import { Box, Center, Stack, Text } from '@chakra-ui/react'
-import { Auth, Link } from '@saas-ui/react'
-import { Features } from 'components/features'
-import { BackgroundGradient } from 'components/gradients/background-gradient'
+// import NextLink from 'next/link'
+// import { Box, Center, Stack, Text } from '@chakra-ui/react'
+// import { Auth, Link } from '@saas-ui/react'
+// import { Features } from 'components/features'
+// import { BackgroundGradient } from 'components/gradients/background-gradient'
 import { Section } from 'components/section'
-import siteConfig from 'data/config'
+// import siteConfig from 'data/config'
 
 import { FaGithub, FaGoogle } from 'react-icons/fa'
-import { PageTransition } from 'components/motion/page-transition'
+// import { PageTransition } from 'components/motion/page-transition'
 
 const providers = {
   google: {
@@ -25,7 +25,8 @@ const providers = {
 const Login: NextPage = () => {
   return (
     <Section height="100vh" innerWidth="container.xl">
-      <BackgroundGradient
+        <h1>Contentlayer Blog Example</h1>
+      {/* <BackgroundGradient
         zIndex="-1"
         width={{ base: 'full', lg: '50%' }}
         left="auto"
@@ -90,7 +91,7 @@ const Login: NextPage = () => {
             </Box>
           </Center>
         </Stack>
-      </PageTransition>
+      </PageTransition> */}
     </Section>
   )
 }
