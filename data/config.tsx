@@ -1,4 +1,3 @@
-import { Button } from '@chakra-ui/react'
 import { Link } from '@saas-ui/react'
 import { NextSeoProps } from 'next-seo'
 import { FaGithub, FaTwitter } from 'react-icons/fa'
@@ -8,34 +7,35 @@ import { Logo } from './logo'
 const siteConfig = {
   logo: Logo,
   seo: {
-    title: 'Saas UI',
-    description: 'The React component library for startups',
+    title: 'Cloud Vortex Innovation',
+    description: 'A vortex of innovation in the cloud.',
   } as NextSeoProps,
   termsUrl: '#',
   privacyUrl: '#',
   header: {
     links: [
       {
-        id: 'features',
-        label: 'Features',
+        id: 'home',
+        label: 'Home',
+        href: '/',
       },
       {
-        id: 'pricing',
-        label: 'Pricing',
+        id: 'about-us',
+        label: 'About Us',
       },
       {
-        id: 'faq',
-        label: 'FAQ',
+        id: 'services',
+        label: 'Services',
       },
-      {
-        label: 'Login',
-        href: '/login',
-      },
-      {
-        label: 'Sign Up',
-        href: '/signup',
-        variant: 'primary',
-      },
+      // {
+      //   label: 'Login',
+      //   href: '/login',
+      // },
+      // {
+      //   label: 'Sign Up',
+      //   href: '/signup',
+      //   variant: 'primary',
+      // },
     ],
   },
   footer: {
