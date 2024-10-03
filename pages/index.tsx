@@ -5,10 +5,6 @@ import {
   Container,
   Box,
   Stack,
-  HStack,
-  ButtonGroup,
-  Button,
-  Icon,
   Heading,
   Text,
   Wrap,
@@ -24,9 +20,7 @@ import { FallInPlace } from "components/motion/fall-in-place";
 import { Hero } from "components/hero";
 import { Link, Br } from "@saas-ui/react";
 import { Em } from "components/typography";
-import { NextjsLogo, ChakraLogo } from "components/logos";
 import {
-  FiArrowRight,
   FiBox,
   FiCheck,
   FiCode,
@@ -48,7 +42,6 @@ import { BackgroundGradient } from "components/gradients/background-gradient";
 import { Faq } from "components/faq";
 import { Pricing } from "components/pricing/pricing";
 
-import { ButtonLink } from "components/button-link/button-link";
 import { Testimonial, Testimonials } from "components/testimonials";
 
 import faq from "data/faq";
@@ -60,6 +53,8 @@ import {
   HighlightsItem,
   HighlightsTestimonialItem,
 } from "components/highlights";
+import { Typewriter } from "components/typewriter";
+import siteConfig from 'data/config'
 
 const Home: NextPage = () => {
   return (
@@ -89,57 +84,28 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container maxW="container.xl" pt={{ base: 40, lg: 60 }} pb="40">
+      <Container maxW="container.xl" pt={{ base: 0, sm: 40, lg: 60 }} pb={{ base: 0, lg: 40 }}>
         <Stack direction={{ base: "column", lg: "row" }} alignItems="center">
           <Hero
-            id="home"
-            justifyContent="flex-start"
             px="0"
+            justifyContent={{ base: "center", lg: "flex-start" }}
             title={
-              <FallInPlace>
-                Build beautiful
-                <Br /> software faster
+              <FallInPlace
+                fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
+              >
+                Empowering <Br /> Business With <Br />
+                <Typewriter text={siteConfig.seo?.title ?? ""} />
               </FallInPlace>
             }
             description={
-              <FallInPlace delay={0.4} fontWeight="medium">
-                Saas UI is a <Em>React component library</Em>
-                <Br /> that doesn&apos;t get in your way and helps you <Br />{" "}
-                build intuitive SaaS products with speed.
+              <FallInPlace
+                delay={0.4}
+                fontWeight="medium"
+              >
+                in &mdash; Digital Era
               </FallInPlace>
             }
-          >
-            <FallInPlace delay={0.8}>
-              <HStack pt="4" pb="12" spacing="8">
-                <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
-              </HStack>
-
-              <ButtonGroup spacing={4} alignItems="center">
-                <ButtonLink colorScheme="primary" size="lg" href="/signup">
-                  Sign Up
-                </ButtonLink>
-                <ButtonLink
-                  size="lg"
-                  href="https://demo.saas-ui.dev"
-                  variant="outline"
-                  rightIcon={
-                    <Icon
-                      as={FiArrowRight}
-                      sx={{
-                        transitionProperty: "common",
-                        transitionDuration: "normal",
-                        ".chakra-button:hover &": {
-                          transform: "translate(5px)",
-                        },
-                      }}
-                    />
-                  }
-                >
-                  View demo
-                </ButtonLink>
-              </ButtonGroup>
-            </FallInPlace>
-          </Hero>
+          ></Hero>
           <Box
             height="600px"
             position="absolute"
@@ -163,6 +129,22 @@ const HeroSection: React.FC = () => {
               </Box>
             </FallInPlace>
           </Box>
+        </Stack>
+      </Container>
+
+      <Container maxW="container.xl" pt={{ base: 0, lg: 40 }}>
+        <Stack direction={{ base: "row" }} alignItems="center">
+          <FallInPlace delay={0.7} width="100%">
+            <Text
+              as="h2"
+              fontSize={{ base: "2xl", sm: "4xl", md: "6xl", lg: "8xl" }}
+              color="muted"
+              textAlign="center"
+              sx={{ textTransform: "uppercase", letterSpacing: "10px" }}
+              mb="8">
+              our vision is guided by a powerful mission
+            </Text>
+          </FallInPlace>
         </Stack>
       </Container>
 
