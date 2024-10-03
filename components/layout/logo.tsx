@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Box, Flex, Heading, VisuallyHidden } from '@chakra-ui/react'
+import { Box, Flex, HStack, Heading, useBreakpointValue } from '@chakra-ui/react'
 import { Link } from '@saas-ui/react'
 
 export interface LogoProps {
@@ -20,6 +20,7 @@ export const Logo = ({ href = '/', onClick }: LogoProps) => {
       </Heading>
     )
   }
+  const isSmallScreen = useBreakpointValue({ base: true, sm: false });
 
   return (
     <Flex h="8" flexShrink="0" alignItems="flex-start">
@@ -30,8 +31,15 @@ export const Logo = ({ href = '/', onClick }: LogoProps) => {
         borderRadius="sm"
         onClick={onClick}
       >
-        {logo}
-        <VisuallyHidden>{siteConfig.seo?.title}</VisuallyHidden>
+        <HStack>
+          <Box>{logo}</Box>
+          <Box sx={{
+            [isSmallScreen ? 'srOnly' : '']: true,
+          }}
+          >
+            {siteConfig.seo?.title}
+          </Box>
+        </HStack>
       </Link>
     </Flex>
   )
