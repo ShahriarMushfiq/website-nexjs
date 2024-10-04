@@ -20,12 +20,12 @@ const siteConfig = {
         href: '/',
       },
       {
-        id: 'about-us',
-        label: 'About Us',
-      },
-      {
         id: 'services',
         label: 'Services',
+      },
+      {
+        id: 'about-us',
+        label: 'About Us',
       },
     ],
   },
