@@ -137,7 +137,7 @@ const HeroSection: React.FC = () => {
           <FallInPlace delay={0.7} width="100%">
             <Text
               as="h2"
-              fontSize={{ base: "2xl", sm: "4xl", md: "6xl", lg: "8xl" }}
+              fontSize={{ base: "2xl", sm: "4xl", lg: "6xl" }}
               color="muted"
               textAlign="center"
               sx={{ textTransform: "uppercase", letterSpacing: "10px" }}
