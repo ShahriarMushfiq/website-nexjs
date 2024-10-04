@@ -20,9 +20,7 @@ const Revealer = ({ children }: any) => {
   return children
 }
 
-export interface FeaturesProps
-  extends Omit<SectionTitleProps, 'title' | 'variant'>,
-    ThemingProps<'Features'> {
+export interface FeaturesProps extends Omit<SectionTitleProps, 'title' | 'variant'>, ThemingProps<'Features'> {
   title?: React.ReactNode
   description?: React.ReactNode
   features: Array<FeatureProps>
