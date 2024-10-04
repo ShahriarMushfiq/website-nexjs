@@ -27,15 +27,6 @@ const siteConfig = {
         id: 'services',
         label: 'Services',
       },
-      // {
-      //   label: 'Login',
-      //   href: '/login',
-      // },
-      // {
-      //   label: 'Sign Up',
-      //   href: '/signup',
-      //   variant: 'primary',
-      // },
     ],
   },
   footer: {
