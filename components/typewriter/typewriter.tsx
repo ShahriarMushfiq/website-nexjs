@@ -39,7 +39,7 @@ export const Typewriter: React.FC<TypewriterProps> = ({ text }) => {
     }
 
     return () => clearTimeout(timeoutId);
-  }, [index, isDeleting]);
+  }, [index, isDeleting, text, _text]);
 
   useEffect(() => {
     const cursorTimeoutId = setTimeout(() => {

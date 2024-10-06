@@ -20,22 +20,13 @@ const siteConfig = {
         href: '/',
       },
       {
-        id: 'about-us',
-        label: 'About Us',
-      },
-      {
         id: 'services',
         label: 'Services',
       },
-      // {
-      //   label: 'Login',
-      //   href: '/login',
-      // },
-      // {
-      //   label: 'Sign Up',
-      //   href: '/signup',
-      //   variant: 'primary',
-      // },
+      {
+        id: 'about-us',
+        label: 'About Us',
+      },
     ],
   },
   footer: {
