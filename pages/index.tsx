@@ -195,53 +195,6 @@ const HighlightsSection = () => {
 
   return (
     <Highlights>
-      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
-        <VStack alignItems="flex-start" spacing="8">
-          <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ open source components</Em>.
-            Including authentication screens with Clerk, Supabase and Magic.
-            Fully functional forms with React Hook Form. Data tables with React
-            Table.
-          </Text>
-
-          <Flex
-            rounded="full"
-            borderWidth="1px"
-            flexDirection="row"
-            alignItems="center"
-            py="1"
-            ps="8"
-            pe="2"
-            bg="primary.900"
-            _dark={{ bg: "gray.900" }}
-          >
-            <Box>
-              <Text color="yellow.400" display="inline">
-                yarn add
-              </Text>{" "}
-              <Text color="cyan.300" display="inline">
-                @saas-ui/react
-              </Text>
-            </Box>
-            <IconButton
-              icon={hasCopied ? <FiCheck /> : <FiCopy />}
-              aria-label="Copy install command"
-              onClick={onCopy}
-              variant="ghost"
-              ms="4"
-              isRound
-              color="white"
-            />
-          </Flex>
-        </VStack>
-      </HighlightsItem>
-      <HighlightsItem title="Solid foundations">
-        <Text color="muted" fontSize="lg">
-          We don&apos;t like to re-invent the wheel, neither should you. We
-          selected the most productive and established tools in the scene and
-          build Saas UI on top of it.
-        </Text>
-      </HighlightsItem>
       <HighlightsTestimonialItem
         name="Renata Alink"
         description="Founder"
@@ -291,6 +244,53 @@ const HighlightsSection = () => {
             </Tag>
           ))}
         </Wrap>
+      </HighlightsItem>
+      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
+        <VStack alignItems="flex-start" spacing="8">
+          <Text color="muted" fontSize="xl">
+            Get started for free with <Em>30+ open source components</Em>.
+            Including authentication screens with Clerk, Supabase and Magic.
+            Fully functional forms with React Hook Form. Data tables with React
+            Table.
+          </Text>
+
+          <Flex
+            rounded="full"
+            borderWidth="1px"
+            flexDirection="row"
+            alignItems="center"
+            py="1"
+            ps="8"
+            pe="2"
+            bg="primary.900"
+            _dark={{ bg: "gray.900" }}
+          >
+            <Box>
+              <Text color="yellow.400" display="inline">
+                yarn add
+              </Text>{" "}
+              <Text color="cyan.300" display="inline">
+                @saas-ui/react
+              </Text>
+            </Box>
+            <IconButton
+              icon={hasCopied ? <FiCheck /> : <FiCopy />}
+              aria-label="Copy install command"
+              onClick={onCopy}
+              variant="ghost"
+              ms="4"
+              isRound
+              color="white"
+            />
+          </Flex>
+        </VStack>
+      </HighlightsItem>
+      <HighlightsItem title="Solid foundations">
+        <Text color="muted" fontSize="lg">
+          We don&apos;t like to re-invent the wheel, neither should you. We
+          selected the most productive and established tools in the scene and
+          build Saas UI on top of it.
+        </Text>
       </HighlightsItem>
     </Highlights>
   );
