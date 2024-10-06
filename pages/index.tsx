@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container maxW="container.xl" pt={{ base: 0, sm: 40, lg: 60 }} pb={{ base: 0, lg: 40 }}>
+      <Container maxW="container.xl" pt={{ base: 0, sm: 20, lg: 60 }} pb={{ base: 0, lg: 40 }}>
         <Stack direction={{ base: "column", lg: "row" }} alignItems="center">
           <Hero
             px="0"
@@ -150,39 +150,36 @@ const HeroSection: React.FC = () => {
 
       <Features
         id="benefits"
-        columns={[1, 2, 4]}
-        iconSize={4}
+        columns={[1, 2, 2, 2, 4]}
+        iconSize={5}
         innerWidth="container.xl"
         pt="20"
         features={[
           {
             title: "Accessible",
             icon: FiSmile,
-            description: "All components strictly follow WAI-ARIA standards.",
+            description: "We aim to create an inclusive technological ecosystem where all components are accessible to everyone here.",
             iconPosition: "left",
             delay: 0.6,
           },
           {
-            title: "Themable",
-            icon: FiSliders,
-            description:
-              "Fully customize all components to your brand with theme support and style props.",
+            title: "Standard",
+            icon: FiThumbsUp,
+            description: "Our major commitment is to adhere to ensuring international standards for all.",
             iconPosition: "left",
             delay: 0.8,
           },
           {
-            title: "Composable",
-            icon: FiGrid,
-            description:
-              "Compose components to fit your needs and mix them together to create new ones.",
+            title: "Technology",
+            icon: FiSliders,
+            description: "There is no compromise to pioneer advanced technologies that enhance connectivity and create sustainable growth for businesses of all sizes.",
             iconPosition: "left",
             delay: 1,
           },
           {
-            title: "Productive",
-            icon: FiThumbsUp,
-            description:
-              "Designed to reduce boilerplate and fully typed, build your product at speed.",
+            title: "Solution",
+            icon: FiGrid,
+            description: "We are driven to spearhead the creation of groundbreaking IT solutions that empower brands to flourish in a dynamic digital landscape.",
             iconPosition: "left",
             delay: 1.1,
           },
