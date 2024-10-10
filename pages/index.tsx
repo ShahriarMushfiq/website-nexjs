@@ -13,6 +13,10 @@ import {
   IconButton,
   VStack,
   Flex,
+  SimpleGrid,
+  GridItem,
+  useInterval,
+  HStack
 } from "@chakra-ui/react";
 import { SEO } from "components/seo/seo";
 
@@ -190,48 +194,61 @@ const HeroSection: React.FC = () => {
   );
 };
 
+const AutoSlideHighlightsTestimonialItem = () => {
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  useInterval(() => {
+    setCurrentIndex((currentIndex + 1) % testimonials.founderComments.length);
+  }, 5000); // 5 seconds
+
+  return (
+    <SimpleGrid columns={1} spacing={8}>
+      {testimonials.founderComments.map((testimonial, index) => (
+        <GridItem key={index} display={index === currentIndex ? 'block' : 'none'}>
+          <HighlightsTestimonialItem
+            name={testimonial.name}
+            description={testimonial.description}
+            avatar={testimonial.avatar}
+            gradient={["primary.300", "secondary.500"]}
+          >
+            {testimonial.text}
+          </HighlightsTestimonialItem>
+          <HStack justifyContent="center" gap={8} padding={4}>
+            {testimonials.founderComments.map((testimonial, index) => (
+              <Box key={index} w={3} h={3} bg={index === currentIndex ? 'primary.600' : 'gray.300'} borderRadius="full" />
+            ))}
+          </HStack>
+        </GridItem>
+      ))}
+    </SimpleGrid>
+  );
+};
+
 const HighlightsSection = () => {
   const { value, onCopy, hasCopied } = useClipboard("yarn add @saas-ui/react");
 
   return (
     <Highlights>
-      <HighlightsTestimonialItem
-        name="Renata Alink"
-        description="Founder"
-        avatar="/static/images/avatar.jpg"
-        gradient={["primary.100", "secondary.300"]}
-      >
-        “Saas UI helped us set up a beautiful modern UI in no time. It saved us
-        hundreds of hours in development time and allowed us to focus on
-        business logic for our specific use-case from the start.”
-      </HighlightsTestimonialItem>
+      <AutoSlideHighlightsTestimonialItem />
       <HighlightsItem
         colSpan={[1, null, 2]}
         title="Start your next idea two steps ahead"
       >
         <Text color="muted" fontSize="lg">
-          We took care of all your basic frontend needs, so you can start
-          building functionality that makes your product unique.
+          We take care of all your basic needs, so you can start building functionality that makes your idea unique.
         </Text>
         <Wrap mt="8">
           {[
-            "authentication",
-            "navigation",
-            "crud",
-            "settings",
-            "multi-tenancy",
-            "layouts",
-            "billing",
-            "a11y testing",
-            "server-side rendering",
-            "documentation",
-            "onboarding",
-            "storybooks",
-            "theming",
-            "upselling",
-            "unit testing",
-            "feature flags",
-            "responsiveness",
+            "Strategic Collaborator",
+            "Pioneer Beneficiary",
+            "Key Stakeholder",
+            "Authentication",
+            "Unity",
+            "Exploratory Associate",
+            "Mutual Visionary",
+            "Development Ally",
+            "Synergistic Partner",
+            "Skilled Associate",
           ].map((value) => (
             <Tag
               key={value}
@@ -245,16 +262,13 @@ const HighlightsSection = () => {
           ))}
         </Wrap>
       </HighlightsItem>
-      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
+      <HighlightsItem colSpan={[1, null, 2]} title="Our Endeavor">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ open source components</Em>.
-            Including authentication screens with Clerk, Supabase and Magic.
-            Fully functional forms with React Hook Form. Data tables with React
-            Table.
+            At <strong>Cloud Vortex Innovation</strong>, the core mission is to revolutionize businesses through transformative IT solutions that leverage cutting-edge technologies that empower brands to scale, innovate, and thrive in a hyper-connected world.
           </Text>
 
-          <Flex
+          {/* <Flex
             rounded="full"
             borderWidth="1px"
             flexDirection="row"
@@ -282,14 +296,12 @@ const HighlightsSection = () => {
               isRound
               color="white"
             />
-          </Flex>
+          </Flex> */}
         </VStack>
       </HighlightsItem>
-      <HighlightsItem title="Solid foundations">
+      <HighlightsItem title="Core Foundation">
         <Text color="muted" fontSize="lg">
-          We don&apos;t like to re-invent the wheel, neither should you. We
-          selected the most productive and established tools in the scene and
-          build Saas UI on top of it.
+          We don&apos;t like to reinvent the wheel, and neither should you. Our approach is to work on proven frameworks that are the most unique in the scene on top of them.
         </Text>
       </HighlightsItem>
     </Highlights>

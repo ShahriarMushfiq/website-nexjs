@@ -83,6 +83,7 @@ export const HighlightsTestimonialItem: React.FC<
           </Box>
         }
         avatar={avatar}
+        avatarSize={{base: "sm", sm: "md", md: "xl"}}
         border="0"
         bg="transparent"
         boxShadow="none"
@@ -108,7 +109,8 @@ export const Highlights: React.FC<SectionProps> = (props) => {
     >
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
-        gap={8}
+        rowGap={8}
+        columnGap={{lg: 8}}
         position="relative"
       >
         {children}
