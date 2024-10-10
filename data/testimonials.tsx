@@ -39,4 +39,24 @@ export default {
       ),
     },
   ],
+  founderComments : [
+    {
+      name: "Shahriar Mushficul Islam",
+      description: "Founder & CEO",
+      avatar: "/static/images/avatar1.jpg",
+      text: "\"Technology has the power to change the world, but it's how we wield that power that truly matters. Let's use it to make a positive impact on society.\""
+  },
+    {
+      name: "Seljan Hasimova",
+      description: "CTO",
+      avatar: "/static/images/avatar2.png",
+      text: "\"Success in the tech industry isn't about following trends; it's about setting them. Dare to be different, and the world will take notice.\""
+    },
+    {
+      name: "Shahbab Mushficul islam",
+      description: "Co-Founder",
+      avatar: "/static/images/avatar3.png",
+      text: "\"Innovation is not just about creating something new; it's about solving problems in a way that's never been done before.\""
+    }
+  ]
 }
